@@ -1,0 +1,19 @@
+/* Reset */ 
+*, 
+*::after, 
+*::before{ 
+    margin: 0;
+    padding: 0;
+   
+    box-sizing: inherit;
+}
+
+html{
+    /* this will be % of font size user entered */
+    font-size: 62.5%
+}
+
+body{
+    /* to not adding padding or margin to height of element */
+    box-sizing: border-box;
+}
