@@ -1,0 +1,8 @@
+// as elements is float we use this hack to not make it's height: 0
+@mixin  clearfix {
+    &::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
