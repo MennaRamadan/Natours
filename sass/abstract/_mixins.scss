@@ -14,3 +14,38 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+// Media query manager
+/*
+    0 - 600px  Phones
+    600px - 900px Tablet Portait
+    900px - 1200px Tablet landscape
+    1200px - + normal style -desktop
+    1800 -+ Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+// iem ==== 16px 
+// media query not affected with body font-size but with font-size from the browser
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone{
+        // using @content to pass ablock of code
+        @media (max-width: 37.5em) {@content;} //600px
+    }
+    @if $breakpoint == tab-port{
+        @media (max-width: 56.25em) {@content;} //900px
+    }
+    @if $breakpoint == tab-land{
+        @media (mx-width: 75em) {@content;} //1200px
+    }
+    @if $breakpoint == big-desktop{
+        @media (mx-width: 112.5em) {@content;} //1800px
+    }
+}
