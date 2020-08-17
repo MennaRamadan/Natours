@@ -341,9 +341,15 @@
             </section>
         </main>
 
+        <!-- here is we can use denisty img this for applying one img for low res and another one for high res -->
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="img/logo-green-2x.png" alt="full logo" class="footer__logo">
+                <picture class="footer__logo">
+                    <!-- this means in case of max-width:37.5 em will use image with 1x in samll res and 2x in high res -->
+                    <!-- otherwise will use images in img tag -->
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="full logo" >
+                </picture>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
